@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (before closing body tag) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.animate-on-scroll, .fade-in-down, .slide-left, .slide-right, .zoom-in').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 5s ease;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease, transform 3s ease;
+  }
+
+  .fade-in-down.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease, transform 3s ease;
+  }
+
+  .slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease, transform 3s ease;
+  }
+
+  .slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 5s ease;
+  }
+
+  .zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: white;
+        position: relative;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1, h2, h3, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      }
+      button, .btn {
+  font-family: 'playdair display', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+      .logo img {
+        height: 80px;
+      }
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: 500;
+        color: #333;
+      }
+      nav a:hover {
+        color: #014a0c;
+      }
+      nav a:hover,
+      nav a.active {
+        color: #014a0c;
+      }
+      .btn {
+        background: #014a0c;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+      }
+      .btn:hover {
+      background: #000;
+      color: #fff;
+      }.hero {
+  background: url("image/grnwht.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;  /* ✅ THIS MAKES IMAGE FIXED */
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust darkness as needed */
+  z-index: -1;
+}
+
+      .hero h5 {
+        color: #014a0c;
+        font-size: 30px;
+        margin: 0;
+      }
+      .hero h1 {
+        font-size: 80px;
+        margin: 10px 0;
+      }
+     .section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.section p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  text-align: center;
+  font-weight: 500;
+}
+      .highlight-heading {
+        text-align: center;
+        color: #b71c1c;
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 60px;
+      }
+      .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 200px); /* exactly 3 cards per row */
+  gap: 70px;
+  justify-content: center; /* center the grid */
+  margin-top: 40px;
+}
+
+.card {
+  position: relative;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 👈 shift content to bottom */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+}
+.card-content h3 {
+  font-size: 25px;
+  color: #014a0c; /* 👈 apply green shade */
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+footer {
+  margin-top: 0;
+  padding-top: 40px; /* adjust as per need */
+}
+
+
+
+       .footer {
+  position: relative;
+  background: url("image/renovetsofa.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 100vh; /* full height section */
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* overlay */
+  z-index: 1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding-top: 60px;
+}
+.footer-content h2{
+  font-size: 50px;
+  color: #014a0c;
+}
+.footer-content p{
+  padding-bottom: 15px;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover Colors */
+.social-icons a.facebook:hover { color: #1877f2; }   /* Facebook Blue */
+.social-icons a.x:hover { color: #000000; }    /* Twitter Blue */
+.social-icons a.instagram:hover { color: #e1306c; }  /* Instagram Pink */
+.social-icons a.google:hover { color: #db4437; }     /* Google Red */
+.social-icons a.yelp:hover { color: #af0606; }        /* Yelp Red */
+
+.footer-bottom {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 30px;
+}
+.divider-icon {
+  font-size: 28px;
+  color: #014a0c;
+  margin-top: 40px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="image/logo-green.png" height="120px" width="100px" alt="Logo" />
+      </div>
+      <nav>
+        <a href="homepage1.htm">Home</a>
+        <a href="aboutuspage2.htm">About Us</a>
+        <a href="servicepage3.htm" class="active">Service</a>
+        <a href="contactpage.htm">Contact</a>
+        <a href="contactpage.htm" class="btn">Get Instant Quote</a>
+        <a href="contactpage.htm" class="btn">Need Urgent Repair?</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="divider-icon">❈</div>
+      <div class="hero-content fade-in-down">
+        <h5>All Office Chair Repair in Jaipur</h5>
+      <h1>Our service</h1>
+      </div>
+    </section>
+
+    <section class="section animate-on-scroll">
+      <h2>Best Sofa Set Repair</h2>
+      <p>Loved by Thousands</p>
+      <div>&nbsp;</div>
+
+      <p>
+        Delivering Excellence, One Repair at a Time – Because You Deserve the Best.
+        We repair with precision,serve with passion,and deliver only the best.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="highlight-heading">
+        We Provide All Type furniture & Chair Repair Services Jaipur
+      </h2>
+      <p>
+        Trust Expert Furniture Repair & Service for unmatched craftsmanship and care. From consultation to completion, we ensure quality, reliability, and satisfaction every step of the way.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <img src="image/furnirep.png" alt="Recliner" />
+          <div class="card-content slide-left">
+            <h3>Recliner Chair Repair</h3>
+            <p>
+              We specialize in fixing and restoring recliner chairs to their
+              former glory.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/image/reclinerchair.png" alt="Revolving" />
+          <div class="card-content slide-left">
+            <h3>Revolving Chair Repair</h3>
+            <p>Boost productivity with smooth working revolving chairs.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/image/officechairrepair.png" alt="Executive" />
+          <div class="card-content slide-left">
+            <h3>Executive Chair Repair</h3>
+            <p>Restore premium chairs with expert service and genuine parts.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="image/renovetsofa.png" alt="Sofa Set" />
+          <div class="card-content slide-right">
+            <h3>Sofa Set Repair</h3>
+            <p>From leather stitching to structural repair – we fix it all.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="image/office.png" alt="Office Chair" />
+          <div class="card-content slide-right">
+            <h3>Office Chair Service</h3>
+            <p>We replace wheels, arms, hydraulic lifts and more.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="image/froom - Copy.png" alt="Furniture" />
+          <div class="card-content slide-right">
+            <h3>Furniture Repair</h3>
+            <p>Restore your furniture and give it a new lease on life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <footer class="footer fade-in-down">
+  <div class="footer-overlay"></div>
+  <div class="footer-content">
+    <div class="divider-icon">❈</div>
+    <h2>Let’s Renovate old sofa</h2>
+    <p>Experience superior quality materials and service with Shan Enterprises. From start to finish, we prioritize excellence in every aspect of your project.</p>
+    <a href="contactpage.htm" class="btn">Call Now</a>
+    <p style="margin-top: 10px; font-size: 25px; padding-top: 20px;">Or Call Us : +91 99839 51865</p>
+    
+    <div class="social-icons">
+    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="x"><i class="fab fa-x-twitter"></i></a>
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="google"><i class="fab fa-google"></i></a>
+    <a href="#" class="yelp"><i class="fab fa-yelp"></i></a>
+    </div>
+
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 shanenterprisejpr.com</span> |
+      <span>Developed by Aaftab</span>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Furniture Repair in Jagatpura – Same Day & Next Day Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (before closing body tag) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.animate-on-scroll, .fade-in-down, .slide-left, .slide-right, .zoom-in').forEach(el => {
+      observer.observe(el);
+    });
+  });
+
+
+
+
+
+  const amazonProducts = [
+    {
+      title: "Ergonomic Office Chair",
+      image: "/furnituretemp/image/officechairrepair.png",
+      price: "₹5,499",
+      link: "https://www.amazon.in/dp/B09XYZ"
+    },
+    {
+      title: "Recliner Sofa Set",
+      image: "/furnituretemp/image/caruselsofa.png",
+      price: "₹12,999",
+      link: "https://www.amazon.in/dp/B08ABC"
+    },
+    {
+      title: "Wooden Study Table",
+      image: "/furnituretemp/image/study.png",
+      price: "₹3,249",
+      link: "https://www.amazon.in/dp/B07DEF"
+    }
+  ];
+
+  const container = document.getElementById("amazon-products");
+  amazonProducts.forEach(product => {
+    container.innerHTML += `
+      <div class="service-card">
+        <img src="${product.image}" alt="${product.title}" />
+        <h3>${product.title}</h3>
+        <p><strong>${product.price}</strong></p>
+        <a href="${product.link}" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+    `;
+  });
+</script>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #fff;
+        color: #333;
+      }
+
+      .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 5s ease;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease, transform 3s ease;
+  }
+
+  .fade-in-down.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease, transform 3s ease;
+  }
+
+  .slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease, transform 3s ease;
+  }
+
+  .slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 5s ease;
+  }
+
+  .zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: white;
+        position: relative;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1, h2, h3, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      }
+      button, .btn {
+  font-family: 'playdair display', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+      .logo img {
+        height: 80px;
+      }
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: 500;
+        color: #333;
+      }
+      nav a:hover {
+        color: #014a0c;
+      }
+      nav a:hover,
+      nav a.active {
+        color: #014a0c;
+      }
+      .btn {
+        background: #014a0c;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        text-shadow: 1px 1px 0 #000;
+      }
+      .btn:hover {
+      background: #000;
+      color: #fff;
+      }
+      .hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color:#014a0c;
+  overflow: hidden;
+}
+
+
+.hero_content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-align: center;
+        top: 40%;
+        transform: translateY(-50%);
+        font-family: sans-serif;
+        color: #014a0c;
+        padding: 30px 10px;
+      }
+
+      
+      .hero_content p {
+        font-size: 25px;
+        text-shadow: 1px 1px 0.5 #fff;
+        font-weight: 400;
+        color: #000;
+      }
+      .hero_content h1 {
+        padding-bottom: 30px;
+        font-size: 50px;
+        text-shadow: 1px 1px 0 #000;
+      }
+      .hero_content h5 {
+        padding-bottom: 30px;
+        font-size: 20px;
+        text-shadow: 1px 1px 0 #000;
+      }
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background iframe {
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+      .section {
+        padding: 60px 40px;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .section-title {
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+      .services,
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .service-card,
+      .testimonial-card {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 20px;
+        background: white;
+        text-align: center;
+      }
+      .service-card img,
+      .testimonial-card img {
+        max-width: 100%;
+        border-radius: 4px;
+      }
+      .callout {
+      position: relative;
+      background: url("image/froom.png") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 800px;
+      text-align: center;
+      overflow: hidden; 
+      }
+
+      .callout .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* dark transparent */
+      z-index: 1;
+    }
+
+.callout .content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 20px;
+}
+
+.amazone_section .section-title{
+  font-size: 50px;
+  color: white;
+  padding-top: 50px;
+}
+
+.footer {
+  position: relative;
+  background: url("/furnituretemp/image/renovetsofa.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 100vh; /* full height section */
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* overlay */
+  z-index: 1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding-top: 60px;
+}
+.footer-content h2{
+  font-size: 50px;
+  color: #014a0c;
+  text-shadow: 1px 1px 0 #000;
+}
+.footer-content p{
+  padding-bottom: 15px;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover Colors */
+.social-icons a.facebook:hover { color: #1877f2; }   /* Facebook Blue */
+.social-icons a.x:hover { color: #000000; }    /* Twitter Blue */
+.social-icons a.instagram:hover { color: #e1306c; }  /* Instagram Pink */
+.social-icons a.google:hover { color: #db4437; }     /* Google Red */
+.social-icons a.yelp:hover { color: #af0606; }        /* Yelp Red */
+
+.footer-bottom {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 30px;
+}
+
+      .video-background iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.7;
+        object-fit: cover;
+      }
+
+      
+
+      .content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-align: center;
+        top: 40%;
+        transform: translateY(-50%);
+        font-family: sans-serif;
+        color: #014a0c;
+        padding: 30px 10px;
+      }
+
+      
+      .content p {
+        font-size: 25px;
+        text-shadow: 1px 1px 0 #000;
+        font-weight: 600;
+      }
+      .content h1 {
+        padding-bottom: 30px;
+        font-size: 50px;
+        text-shadow: 1px 1px 0 #000;
+      }
+      .content h4 {
+        padding-bottom: 30px;
+        font-size: 20px;
+        text-shadow: 1px 1px 0 #000;
+      }
+      .chair {
+        margin-top: 100px;
+      }
+      .chair h2{
+        font-size: 50px;
+      }
+      .textblk {
+        color: #014a0c;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 14px;
+        line-height: 1.1;
+      }
+      .img{
+        padding-top: 200px;
+      }
+      .img img{
+        border-radius: 8px;
+      }
+
+      .service-card img{
+        height: 200px;
+        width: 300px;
+      }
+      
+
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.lh{
+  line-height: 25px;
+}
+
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/furnituretemp/image/logo-green.png" height="120px" width="100px" alt="Logo" />
+      </div>
+      <nav>
+        <a href="homepage1.htm" class="active">Home</a>
+        <a href="aboutuspage2.htm">About Us</a>
+        <a href="servicepage3.htm">Service</a>
+        <a href="contactpage.htm">Contact</a>
+        <a href="contactpage.htm" class="btn">Get Instant Quote</a>
+        <a href="contactpage.htm" class="btn">Need Urgent Repair?</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="video-background">
+        <iframe
+        src="https://www.youtube.com/embed/-_aAKyCka_4?autoplay=1&mute=1&controls=0&loop=1&playlist=-_aAKyCka_4"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="hero_content">
+        <h1>Expert Furniture Repair</h1>
+        <p>Quality Service with Real Work Showcase</p>
+        <h5>#1 Chair Repair Service Jaipur</h5>
+        <p class="textblk">
+          Welcome to Shan enterprises. We provided Sofa set repairing, Office chair repairing, Revolving chair repairing & Recliner repair center in Jaipur. We are completely focused on providing quality sofa set, revolving chair repair, and service to our customers.
+        </p>
+        <div style="margin-top: 20px">
+          <a href="contactpage.htm" class="btn" style="margin-right: 10px">Book Now</a>
+          <a href="contactpage.htm" class="btn">Our Service</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap" >
+        <div style="flex: 1" class="chair slide-right">
+          <h2>#1 Office Chair Repair Service Provider in Jaipur</h2>
+          <p class="lh">
+            Welcome to Shan enterprises. We provided Sofa set repairing, Office chair repairing, Revolving chair repairing & Recliner repair center in Jaipur. We are completely focused on providing quality sofa set, revolving chair repair, and service to our customers.
+          </p>
+          <p class="lh">
+            <strong>Expert Furniture Repair & service </strong> opening the year 2001 and Maine aim to provide the best quality services in Jalupura, Jaipur, Rajasthan Shan enterprises best Raw quality material use in repairing of your assets. Any Sofa set repair problem, revolving chair, Office chair, Recliner chair Problem contact Shan enterprises fully expert team, and professional workers
+            With over 20+ years of experience, we bring premium repair services
+            to your doorstep. From recliners to revolving chairs and sofa sets —
+            we fix everything with expertise and speed.
+          </p>
+          <a href="aboutuspage2.htm" class="btn">About Us</a>
+        </div>
+        <div class="img slide-left">
+          <img
+          src="/furnituretemp/image/officechairrepair.png" alt="Chair Service" style="flex: 1" width="400px" height="450px"/>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="section" style="background: #f5f5f5">
+      <h1 class="section-title">Our Services</h1>
+      <div class="services">
+        <div class="service-card slide-left">
+          <img src="/furnituretemp/image/reclinerchair.png" alt="Recliner" />
+          <h3>Recliner Chair Repair</h3>
+          <p>Looking for recliner chair repair in Jaipur? Look no further than <strong> Expert Furniture Repair & Service.</strong> We specialize in fixing and restoring recliner chairs to their former glory. Contact Shan Enterprises.</p>
+          <a href="contactpage.htm" class="btn">Book Now</a>
+        </div>
+        <div class="service-card slide-left">
+          <img src="/furnituretemp/image/revolving.png" alt="Revolving Chair"/>
+          <h3>Revolving Chair Repair</h3>
+          <p><strong> Expert Furniture Repair & Service.</strong> specializes in revolving chair repair in Jaipur. Don't let a broken chair hinder your productivity. Contact us now to get your chair up and spinning again!</p>
+          <a href="contactpage.htm" class="btn">Book Now</a>
+        </div>
+        <div class="service-card slide-left">
+          <img src="/furnituretemp/image/comfortable-office-chair.jpg" alt="Executive Chair"/>
+          <h3>Executive Chair Repair</h3>
+          <p>Is your executive chair in need of repair? <strong> Expert Furniture Repair & Service.</strong> offers professional chair repair services in Jaipur. Contact us now for more information and get your chair fixed and ready for work in no time!
+            We repair and refurbish all kinds of executive chairs.</p>
+          <a href="contactpage.htm" class="btn">Book Now</a>
+        </div>
+        <div class="service-card slide-right">
+          <img src="/furnituretemp/image/sofa.png" alt="Sofa Set" />
+          <h3>Sofa Set Repair</h3>
+          <p>High quality sofa set repair with fabric replacement. Look no further than <strong> Expert Furniture Repair & Service.</strong> We provide top-quality sofa repair and service to ensure your furniture is in perfect condition. Contact us now for more information.</p>
+          <a href="contactpage.htm" class="btn">Book Now</a>
+        </div>
+        <div class="service-card slide-right">
+          <img src="/furnituretemp/image/office.png" alt="Office Chair" />
+          <h3>Office Chair Repair</h3>
+          <p>From base to wheel to armrest — we fix it all! Is your office chair in need of repair? <strong> Expert Furniture Repair & Service.</strong> in Jaipur offers professional office chair repair services. Contact us now for more information and get your chair back in top shape!</p>
+          <a href="contactpage.htm" class="btn">Book Now</a>
+        </div>
+        <div class="service-card slide-right">
+          <img src="/furnituretemp/image/furnirep.png" alt="Furniture" />
+          <h3>Furniture Repair</h3>
+          <p>All wooden and steel furniture repairs under one roof. Looking for furniture repair and service in Jaipur? Look no further than <strong> Expert Furniture Repair & Service.</strong> Contact us now for more information and give your furniture a new lease on life!</p>
+          <a href="contactpage.htm" class="btn">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="callout animate-on-scroll">
+      <div class="overlay"></div> 
+        <div class="content">
+          <p>Enjoy 20% Off on All Revolving Chairs</p>
+          <h1>Happy Hours</h1>
+          <h4>Every Day, 10AM - 08PM</h4>
+          <a href="contactpage.htm" class="btn">Book Now</a>
+      </div>
+    </section>
+
+
+    <section class="section slide-right">
+      <h1 class="section-title">People Say The Nicest Things</h1>
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <p>Very professional and timely. Happy with the outcome. They are very professional and finished the work timely. Good work done! Very happy with the outcome.</p>
+          <p><strong>- Naresh Patel</strong></p>
+        </div>
+        <div class="testimonial-card">
+          <p>Excellent work! Quick service and polite team. Great job! Thank you for taking the time to give your feedback we are pleased we were able to bring your sofa & chair back to life Every day is fast & good sarvice All day team allowed Professional team</p>
+          <p><strong>- Jay Rathore</strong></p>
+        </div>
+        <div class="testimonial-card">
+          <p>Superb quality. They fixed our entire office set in one day. Excellent work done! We had to replace the back support of the office chair. They provided the exact design and color originally on the chair. The person came home and then did all fixed and delivered the next day.</p>
+          <p><strong>- Seema Garg</strong></p>
+        </div>
+        <div class="testimonial-card">
+          <p>Repaired our sofa set and chairs beautifully. Highly recommend! Very good experience. The quality of furniture was very good with great designs as well as finishing.loved it✨✨
+</p>
+          <p><strong>- Nirmala Meena</strong></p>
+        </div>
+      </div>
+    </section>
+
+
+<section class="amazone_section slide-left" style="background: #014a0c; padding: 60px 40px;">
+  <h1 class="section-title" style="color: white;">Our Amazon Picks</h1>
+
+  <div class="amazon-row" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+    
+    <div class="service-card" style="background: white; width: 300px;">
+      <img src="/furnituretemp/image/study.png" alt="Study Table" style="width: 100%; height: 200px; object-fit: cover;" />
+      <h3>Wooden Study Table</h3>
+      <p><strong>₹3,249</strong></p>
+      <a href="https://www.amazon.in/dp/B07DEF" class="btn" target="_blank">Buy on Amazon</a>
+    </div>
+
+    <div class="service-card" style="background: white; width: 300px;">
+      <img src="/furnituretemp/image/blkwhite.png" alt="Recliner Sofa Set" style="width: 100%; height: 200px; object-fit: cover;" />
+      <h3>Recliner Sofa Set</h3>
+      <p><strong>₹23,249</strong></p>
+      <a href="https://www.amazon.in/dp/B07DEF" class="btn" target="_blank">Buy on Amazon</a>
+    </div>
+
+    <div class="service-card" style="background: white; width: 300px;">
+      <img src="/furnituretemp/image/officechairrepair.png" alt="Office Chair" style="width: 100%; height: 200px; object-fit: cover;" />
+      <h3>Ergonomic Office Chair</h3>
+      <p><strong>₹5,249</strong></p>
+      <a href="https://www.amazon.in/dp/B07DEF" class="btn" target="_blank">Buy on Amazon</a>
+    </div>
+
+  </div>
+</section>
+
+
+    <footer class="footer fade-in-down">
+  <div class="footer-overlay"></div>
+  <div class="footer-content">
+    <h2>Let’s Renovate old sofa</h2>
+    <p>Experience superior quality materials and service with Shan Enterprises. From start to finish, we prioritize excellence in every aspect of your project.</p>
+    <a href="contactpage.htm" class="btn">Call Now</a>
+    <p style="margin-top: 10px; font-size: 25px; padding-top: 20px;">Or Call Us : +91 99839 51865</p>
+    
+    <div class="social-icons">
+    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="x"><i class="fab fa-x-twitter"></i></a>
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="google"><i class="fab fa-google"></i></a>
+    <a href="#" class="yelp"><i class="fab fa-yelp"></i></a>
+    </div>
+
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 shanenterprisejpr.com</span> |
+      <span>Developed by Aaftab</span>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

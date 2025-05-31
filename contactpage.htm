@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact / Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (before closing body tag) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.animate-on-scroll, .fade-in-down, .slide-left, .slide-right, .zoom-in').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 5s ease;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease, transform 3s ease;
+  }
+
+  .fade-in-down.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease, transform 3s ease;
+  }
+
+  .slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease, transform 3s ease;
+  }
+
+  .slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 5s ease;
+  }
+
+  .zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: white;
+        position: relative;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1, h2, h3, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      }
+      button, .btn {
+  font-family: 'playdair display', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+      .logo img {
+        height: 80px;
+      }
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: 500;
+        color: #333;
+      }
+      nav a:hover {
+        color: #014a0c;
+      }
+      nav a:hover,
+      nav a.active {
+        color: #014a0c;
+      }
+      .btn {
+        background: #014a0c;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+      }
+      .btn:hover {
+      background: #000;
+      color: #fff;
+      
+       }.hero {
+  background: url("image/blkrom.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;  /* ✅ THIS MAKES IMAGE FIXED */
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust darkness as needed */
+  z-index: -1;
+}
+
+      .hero h5 {
+        color: #014a0c;
+        font-size: 30px;
+        margin: 0;
+      }
+      .hero h1 {
+        font-size: 80px;
+        margin: 10px 0;
+      }
+
+      .contact-highlight {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-highlight h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.contact-highlight .subtitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-highlight .description {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 16px;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  text-align: center;
+}
+
+.contact-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 20px;
+  color: #222;
+  font-weight: 500;
+}
+
+.divider {
+  width: 2px;
+  height: 60px;
+  background-color: #014a0c;
+}
+
+.divider-icon {
+  font-size: 28px;
+  color: #014a0c;
+  margin-top: 40px;
+}
+
+
+      .section {
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+      h2,
+      h3 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .booking-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .booking-form form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      input,
+      select,
+      textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+      }
+      .price-display {
+        font-weight: bold;
+        color: #014a0c;
+        text-align: center;
+      }
+      button {
+        background: #014a0c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .confirmation {
+        margin-top: 30px;
+        text-align: center;
+        display: none;
+      }
+      .confirmation img {
+        max-width: 200px;
+        margin-top: 10px;
+      }
+      iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 30px;
+      }
+      .hours {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .hours h3{
+        font-size: 40px;
+      }
+      .hours p {
+        margin: 5px 0;
+      }
+
+
+      footer {
+  margin-top: 0;
+  padding-top: 40px; /* adjust as per need */
+}
+
+
+
+       .footer {
+  position: relative;
+  background: url("image/renovetsofa.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 100vh; /* full height section */
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* overlay */
+  z-index: 1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding-top: 60px;
+}
+.footer-content h2{
+  font-size: 50px;
+  color: #014a0c;
+}
+.footer-content p{
+  padding-bottom: 15px;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover Colors */
+.social-icons a.facebook:hover { color: #1877f2; }   /* Facebook Blue */
+.social-icons a.x:hover { color: #000000; }    /* Twitter Blue */
+.social-icons a.instagram:hover { color: #e1306c; }  /* Instagram Pink */
+.social-icons a.google:hover { color: #db4437; }     /* Google Red */
+.social-icons a.yelp:hover { color: #af0606; }        /* Yelp Red */
+
+.footer-bottom {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 30px;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="image/logo-green.png" height="120px" width="100px" alt="Logo" />
+      </div>
+      <nav>
+        <a href="homepage1.htm">Home</a>
+        <a href="aboutuspage2.htm">About Us</a>
+        <a href="servicepage3.htm">Service</a>
+        <a href="contactpage.htm" class="active">Contact</a>
+        <a href="contactpage.htm" class="btn">Get Instant Quote</a>
+        <a href="contactpage.htm" class="btn">Need Urgent Repair?</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="divider-icon">❈</div>
+      <div class="hero-content fade-in-down">
+        <h5>All Type Furniture Repair & Service in Jaipur</h5>
+      <h1>Contact Us</h1>
+      <p>We specialize in repairing all types of furniture — sofas, recliners, office chairs, and more. Get expert service, <br> lasting results, and bring back comfort and elegance to your space.</p>
+      </div>
+    </section>
+
+    <section class="contact-highlight animate-on-scroll">
+  <h2>Indian Furniture Repair & Service <br />Jaipur?</h2>
+  <p class="subtitle">Come With Us!</p>
+  <p class="description">
+    Delivering Excellence, One Repair at a Time – Because You Deserve the Best.
+        We repair with precision,serve with passion,and deliver only the best.
+
+  </p>
+  <div class="contact-box">
+    <div class="contact-card">
+      <h3>Shop Number</h3>
+      <p>+91 98765432100</p>
+    </div>
+    <div class="divider"></div>
+    <div class="contact-card">
+      <h3>Personal Number</h3>
+      <p>+91 98765432100</p>
+    </div>
+  </div>
+  <div class="divider-icon">❈</div>
+</section>
+
+
+
+    <section class="section  slide-left">
+      <h2>Book Your Repair Service</h2>
+      <p style="text-align: center">
+        Fill the form below and see service charges instantly.
+      </p>
+      <div class="booking-form">
+        <form id="bookingForm">
+          <input type="text" placeholder="Your Name" required />
+          <input type="text" placeholder="Address" required />
+          <input type="tel" placeholder="Mobile Number" required />
+          <input type="email" placeholder="Email" required />
+          <select id="serviceSelect" required>
+            <option value="">Select Service</option>
+            <option value="Recliner Chair Repair">
+              Recliner Chair Repair - ₹500
+            </option>
+            <option value="Revolving Chair Repair">
+              Revolving Chair Repair - ₹400
+            </option>
+            <option value="Sofa Set Repair">Sofa Set Repair - ₹1000</option>
+            <option value="Office Chair Repair">
+              Office Chair Repair - ₹600
+            </option>
+          </select>
+          <div class="price-display" id="priceDisplay"></div>
+          <button type="submit">Book Now</button>
+        </form>
+      </div>
+      <div class="confirmation" id="confirmation">
+        <h3>Booking Confirmed ✅</h3>
+        <p>
+          Your booking has been received. Please scan the QR below to make
+          payment.
+        </p>
+        <img
+          src="image/ShopQR2.jpg"
+          alt="QR Code"
+        />
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.0014923624086!2d75.78728751504498!3d26.919620983128287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db54f65b6e7fb%3A0xa22f3431a0e39bc3!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1588855292239!5m2!1sen!2sin"
+      ></iframe>
+      <div class="hours">
+        <h3>Open Hours</h3>
+        <p>Mon – Fri: 10 AM – 8 PM</p>
+        <p>Sat – Sun: 10:30 AM – 8 PM</p>
+      </div>
+    </section>
+
+    <footer class="footer slide-right">
+  <div class="footer-overlay"></div>
+  <div class="footer-content">
+    <h2>Let’s Renovate old sofa</h2>
+    <p>Experience superior quality materials and service with Shan Enterprises. From start to finish, we prioritize excellence in every aspect of your project.</p>
+    <a href="contactpage.htm" class="btn">Call Now</a>
+    <p style="margin-top: 10px; font-size: 25px; padding-top: 20px;">Or Call Us : +91 99839 51865</p>
+    
+    <div class="social-icons">
+    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="x"><i class="fab fa-x-twitter"></i></a>
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="google"><i class="fab fa-google"></i></a>
+    <a href="#" class="yelp"><i class="fab fa-yelp"></i></a>
+    </div>
+
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 shanenterprisejpr.com</span> |
+      <span>Developed by Aaftab</span>
+    </div>
+    <div class="divider-icon">❈</div>
+  </div>
+</footer>
+
+    <script>
+      const serviceSelect = document.getElementById("serviceSelect");
+      const priceDisplay = document.getElementById("priceDisplay");
+      const bookingForm = document.getElementById("bookingForm");
+      const confirmation = document.getElementById("confirmation");
+
+      serviceSelect.addEventListener("change", function () {
+        const value = serviceSelect.value;
+        const prices = {
+          "Recliner Chair Repair": 500,
+          "Revolving Chair Repair": 400,
+          "Sofa Set Repair": 1000,
+          "Office Chair Repair": 600,
+        };
+        priceDisplay.textContent = value
+          ? `Service Charges: ₹${prices[value]}`
+          : "";
+      });
+
+      bookingForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        confirmation.style.display = "block";
+        window.scrollTo({ top: confirmation.offsetTop, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
